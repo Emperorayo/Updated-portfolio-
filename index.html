@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+               <header class="logo"><span>My</span>Portfolio</header>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Junior Frontend Software Developer</p>
+                <h1>Hi, I'm Sokunbi <span>Michael</span> </h1>
+
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img.png.jpg">
+                </div>
+                    <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>     
+                    <p>I'm an enthusiastic and detail-oriented Junior Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skils</p>
+                        <p class="tab-links"onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links"onclick="opentab('education')" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Developer</span><br>Web App Development</li>
+                            <li><span>Graphics Designer</span><br>Designing Web Interface</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Frontend Development Training at edX</li>
+                            <li><span>2019-2021</span><br>Graphics Designer at Gimafort</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-Current</span><br>Student at Lautech</li>
+                            <li><span>2019</span><br>Graduated from High-School</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+var tablink = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classlist.remove("active-link")
+    }
+    
+    for(tabcontent of tabcontents){
+        tabcontent.classlist.remove("active-tab")
+    }
+}
+
+    </script>
+    
+</body>
+</html>
