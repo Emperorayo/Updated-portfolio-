@@ -40,8 +40,8 @@
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"onclick="opentab('experience')" >Experience</p>
-                        <p class="tab-links"onclick="opentab('education')" >Education</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -75,10 +75,11 @@ function opentab(tabname){
     for(tablink of tablinks){
         tablink.classlist.remove("active-link");
     }
-    
     for(tabcontent of tabcontents){
         tabcontent.classlist.remove("active-tab");
     }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
 }
 
     </script>
