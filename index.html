@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a58e4464b6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
@@ -27,13 +28,14 @@
             </div>
         </div>
     </div>
+    <!----About----->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="img.png.jpg">
+                    <img src="images/img.png.jpg">
                 </div>
-                    <div class="about-col-2">
+                <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>     
                     <p>I'm an enthusiastic and detail-oriented Junior Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects</p>
 
@@ -66,21 +68,63 @@
             </div>
         </div>
     </div>
+    <!-----services-------->
+    <div id="services">
+          <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developer</h2>
+                    <p>Writing well designed,testable,efficient code by using the best software. <br> Creating website layout/user interface by using standard HTML/CSS practices.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Graphics Design</h2>
+                    <p>Creating visual communications such as adverts, branding, publicity materials and magazine layouts </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---portfolio------>
+    <div id="porfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/stefan-stefancik-5p_7M5MP2Iw-unsplash.jpg" >
+                    <div class="layer">
+                        <h3>Unit Conversion Website</h3>
+                        <p>The site helpsyy to convert basic units such as Kilogram to Gram, Celsius to Fahrenheit and Miles to Kilometre</p>
+                        <a href="#"></a>
+                    </div>    
+                </div>
+                <div class="work">
+                    <img src="images/avi-richards-Z3ownETsdNQ-unsplash.jpg" >
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
 
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classlist.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classlist.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab")
-}
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+           }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab")
+        }
 
     </script>
     
