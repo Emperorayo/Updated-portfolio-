@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Michael's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a58e4464b6.js" crossorigin="anonymous"></script>
 </head>
@@ -13,15 +13,16 @@
         <div class="container">
             <nav>
                <header class="logo"><span>My</span>Portfolio</header>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <i class="fas fa-times"></i>
+                <ul id="sidemenu">
+                   
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Junior Frontend Software Developer</p>
@@ -39,13 +40,13 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>     
-                    <p>I'm an enthusiastic and detail-oriented Junior Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects</p>
+                    <p>I'm an enthusiastic and detail-oriented Junior Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects.</p>
 
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -83,7 +84,7 @@
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
-                    <h2>Graphics Design</h2>
+                    <h2>Graphics Designer</h2>
                     <p>Creating visual communications such as adverts, branding, publicity materials and magazine layouts </p>
                     <a href="#">Learn More</a>
                 </div>
@@ -91,15 +92,15 @@
         </div>
     </div>
     <!---portfolio------>
-    <div id="porfolio">
+    <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title">My Works</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="images/stefan-stefancik-5p_7M5MP2Iw-unsplash.jpg" >
                     <div class="layer">
                         <h3>Unit Conversion Website</h3>
-                        <p>The site helpsyy to convert basic units such as Kilogram to Gram, Celsius to Fahrenheit and Miles to Kilometre</p>
+                        <p>The site helps to convert basic units such as Kilogram to Gram, Celsius to Fahrenheit and Miles to Kilometre</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>    
                 </div>
@@ -130,13 +131,13 @@
                         <a href="https://github.com/Emperorayo"><i class="fa-brands fa-github"></i></a>
                         <a href="https://instagram.com/ayobamichaell?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <a href="" download class="btn btn2">Download Cv</a>
+                    <a href="images/CV_2023021123040316.pdf" download class="btn btn2">Download Cv</a>
                 </div>
                 <div class="contact_right">
                     <form>
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email Adress" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 </div>
@@ -154,16 +155,28 @@
 
         function opentab(tabname){
             for(tablink of tablinks){
-                tablink.classlist.remove("active-link");
+                tablink.classList.remove("active-link");
             }
             for(tabcontent of tabcontents){
-                tabcontent.classlist.remove("active-tab");
+                tabcontent.classList.remove("active-tab");
            }
          event.currentTarget.classList.add("active-link");
-         document.getElementById(tabname).classList.add("active-tab")
+         document.getElementById(tabname).classList.add("active-tab");
         }
 
     </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+   
     
 </body>
 </html>
