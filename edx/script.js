@@ -18,9 +18,9 @@ function temperature(){
     function distance(){
         //To convert KMs to miles
         //KM * 0.62137
-        var km = document.getElementById(kme).value;
+        var km = document.getElementById("km").value;
         var m = km * 0.62137
-        document.getElementById(miles).value = m
+        document.getElementById("miles").value = m
     }
 
 
