@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "esbenp.prettier-vscode",
+        "virejdasani.incredibly-in-your-face",
+        "wallabyjs.console-ninja",
+        "wakatime.vscode-wakatime",
+        "primafuture.open-php-html-js-in-browser"
+    ]
+}
